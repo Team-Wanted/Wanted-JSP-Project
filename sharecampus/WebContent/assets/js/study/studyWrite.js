@@ -38,7 +38,12 @@ function check() {
 
 }
 
-
+/*function send(){
+	alert('들어옴');
+	form[name="studyWriteForm"].submit();
+	
+}
+*/
 
 
 

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="study">
+
+<insert id="insert" parameterType="StudyVO">
+	insert into tbl_study(study_num, member_num, study_title, study_intro, study_area, study_people, study_regist_date, study_ing, study_depart, study_contact)
+	values(#{studyNum}, #{memberNum}, #{studyTitle}, #{studyIntro}, #{studyArea}, #{studyPeople}, #{studyRegistDate}, #{studyIng}, #{studyDepart}, #{studyContact})
+</insert>
+
+<select id="selectAll" parameterType="">
+	
+</select>
+
+<select id="select" parameterType="StudyVO" resultType="StudyVO">
+	select * from tbl_study where studyNum = #{studyNum}
+</select>
+
+<select id="getDate" resultType="String">
+	select study_regist_date from tbl_study
+	order by study_regist_date desc
+</select>
+
+<update id="update" parameterType="StudyVO">
+	update tbl_study
+	set study_title = #{studyTitle}, study_intro = #{studyIntro}, study_area = #{studyArea}, study
+	where board_number = #{boardNumber}
+</update>
+
+<select id="getSequence" resultType="_int">
+	select LAST_INSERT_ID()
+</select>
+
+</mapper>

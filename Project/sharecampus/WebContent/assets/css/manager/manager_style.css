@@ -1,0 +1,84 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans+KR:wght@100;400;500;700;900&display=swap);
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin:0px;
+    overflow: hidden;
+}
+
+.sidebar {
+    background-color: rgb(245, 245, 245);
+    position: absolute;
+    width: 18vw;
+    height: 100vw;
+    float: left;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
+    padding: 10px 20px;
+    color: #3393f4;
+    font-size: 20px;
+    position: relative;
+    font-weight: bold;
+}
+
+.sidebar ul li a img {
+    display: inline-block;
+    padding: 0px 10px 0px 0px;
+    height: 25px;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active{
+    background-color:rgb(220, 220, 220);
+}
+
+.contents {
+    position: relative;
+    color: black;
+    float: right;
+    width: 82vw;
+    height: 100vw;
+    background-color: lightgray;
+}
+
+.contents h3{
+    background-color:#3393f4;
+    padding: 13px;
+    color: white;
+    margin-top:0;
+}
+
+
+.sidebar ul li {
+    position: relative;
+}
+.sidebar ul li ul {
+    display:none;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    width: 18vw;
+}
+
+.sidebar ul li:hover > ul {
+    display: block;
+}
+
+.sidebar ul li ul:hover,
+.sidebar ul li ul.active{
+    display: block;
+}
+
+
+
+
